@@ -3,11 +3,15 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Labb 1</title>
-    <link href="wp-content/themes/inlamning1-wp/assets/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <title>This is index.php</title>
+    <!-- WHEN ADDING WP_HEAD AND QUEING HTML GETS MARGIN???-->
+    <!-- <link href="wp-content/themes/inlamning1-wp/assets/css/font-awesome.css" rel="stylesheet" type="text/css" />
     <link href="wp-content/themes/inlamning1-wp/assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="wp-content/themes/inlamning1-wp/style.css" rel="stylesheet" type="text/css" />
-    <script src="wp-content/themes/inlamning1-wp/assets/js/jquery.js"></script>
+    <script src="wp-content/themes/inlamning1-wp/assets/js/jquery.js"></script> -->
+    <?php
+    wp_head();
+    ?>
 </head>
 
 <body>
