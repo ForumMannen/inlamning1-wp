@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html>
 
+<!--This is file is where the header-content is added, to access it use get_header(); -->
+
 <head>
     <meta charset="UTF-8" />
     <title>Labb 1</title>
-    <!-- WHEN ADDING WP_HEAD AND QUEING HTML GETS MARGIN???-->
-    <!-- <link href="wp-content/themes/inlamning1-wp/assets/css/font-awesome.css" rel="stylesheet" type="text/css" />
-    <link href="wp-content/themes/inlamning1-wp/assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="wp-content/themes/inlamning1-wp/style.css" rel="stylesheet" type="text/css" />
-    <script src="wp-content/themes/inlamning1-wp/assets/js/jquery.js"></script> -->
     <?php
     wp_head();
     ?>
@@ -22,16 +19,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-8 col-sm-6">
-                        <a class="logo" href="index.html">Labb 1</a>
+                        <a class="logo" href="<?php echo esc_url(get_site_url()); ?>">Labb 1</a>
                     </div>
                     <div class="col-sm-6 hidden-xs">
-                        <form id="searchform" class="searchform">
-                            <div>
-                                <label class="screen-reader-text">Sök efter:</label>
-                                <input type="text" />
-                                <input type="submit" value="Sök" />
-                            </div>
-                        </form>
+                        <?php
+                        get_search_form();
+                        ?>
                     </div>
                     <div class="col-xs-4 text-right visible-xs">
                         <div class="mobile-menu-wrap">
@@ -47,8 +40,10 @@
             <form id="searchform" class="searchform">
                 <div>
                     <label class="screen-reader-text">Sök efter:</label>
-                    <input type="text" />
-                    <input type="submit" value="Sök" />
+                    <!--This function is using wordpress searchfunction-->
+                    <?php
+                    get_search_form();
+                    ?>
                 </div>
             </form>
         </div>
@@ -57,7 +52,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
-
+                        <!--This function is adding the menu created and choosen in the adminpanel-->
                         <?php
                         wp_nav_menu(array(
                             'menu' => 'huvudmeny',
@@ -66,29 +61,6 @@
                             'items_wrap' => '<ul class="menu">%3$s</ul>'
                         ));
                         ?>
-                        <!-- <ul class="menu">
-                            <li class="current-menu-item">
-                                <a href="index.html">Hem</a>
-                            </li>
-                            <li>
-                                <a href="blogg.html">Blogg</a>
-                            </li>
-                            <li>
-                                <a href="undersida.html">Undersida</a>
-                            </li>
-                            <li>
-                                <a href="undersida2.html">Undersida 2</a>
-                            </li>
-                            <li>
-                                <a href="undersida3.html">Undersida 3</a>
-                            </li>
-                            <li>
-                                <a href="undersida4.html">Undersida 4</a>
-                            </li>
-                            <li>
-                                <a href="kontakt.html">Kontakt</a>
-                            </li>
-                        </ul> -->
                     </div>
                 </div>
             </div>

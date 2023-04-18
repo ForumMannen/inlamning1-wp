@@ -2,13 +2,14 @@
 get_header();
 ?>
 
+<!--This page is rendering the content of the Homepage-->
 <main>
     <section>
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
                     <div class="hero">
-                        <img src="wp-content/themes/inlamning1-wp/assets/images/city.jpg" />
+                        <img src="<?php the_post_thumbnail_url(); ?>" alt="">
                         <div class="text">
                             <?php
                             if (have_posts()) {
