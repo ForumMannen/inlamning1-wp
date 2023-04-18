@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Labb 1</title>
+    <title><?php bloginfo('name'); ?></title>
     <?php
     wp_head();
     ?>
@@ -19,7 +19,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-8 col-sm-6">
-                        <a class="logo" href="<?php echo esc_url(get_site_url()); ?>">Labb 1</a>
+                        <a class="logo" href="<?php echo esc_url(get_site_url()); ?>"><?php bloginfo('name'); ?></a>
                     </div>
                     <div class="col-sm-6 hidden-xs">
                         <?php
